@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ingreso-egreso-app-nbentos": {
+      "hosting": {
+        "ingresoEgresoApp": [
+          "ingreso-egreso-app-nbentos"
+        ]
+      }
+    }
+  }
+}
