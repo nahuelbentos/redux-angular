@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ChartsModule } from 'ng2-charts';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -24,6 +25,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import { appReducers } from './app.reducer';
+import { OrdenIngresoPipe } from './pipes/orden-ingreso.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { appReducers } from './app.reducer';
     DetalleComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    OrdenIngresoPipe
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,8 @@ import { appReducers } from './app.reducer';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
+    ChartsModule,
+
 
   ],
   providers: [],
